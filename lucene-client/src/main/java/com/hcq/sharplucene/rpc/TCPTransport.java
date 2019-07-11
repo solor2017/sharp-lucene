@@ -66,7 +66,7 @@ public class TCPTransport {
                         }
                     });
 
-            ChannelFuture future = b.connect("localhost", 8080).sync();
+            ChannelFuture future = b.connect(arrs[0], Integer.parseInt(arrs[1])).sync();
             future.channel().writeAndFlush(request).sync();
             future.channel().closeFuture().sync();
         } catch(Exception e){
