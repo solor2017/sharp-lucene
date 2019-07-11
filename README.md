@@ -2,7 +2,7 @@
 
 针对中小型项目快速实现索引增删改查。没必要用zlk那一套，不好维护。  
 使用非常简单：
-在对应的feild上加上自定义注解即可  
+在对应的Field上加上自定义注解即可  
 Java客户端使用
 使用自定义Annotation注释JavaBean  
 自定义的Annotation非常简单，
