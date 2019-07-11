@@ -127,7 +127,7 @@ public class RpcServer {
                     })
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
-            ChannelFuture future = b.bind(8080).sync();
+            ChannelFuture future = b.bind(Integer.parseInt(addrs[1])).sync();
             log.info("服务已启动 正在监听端口"+addrs[1]);
             future.channel().closeFuture().sync();
         } catch (Exception e) {

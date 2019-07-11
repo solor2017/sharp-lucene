@@ -6,6 +6,7 @@ import com.hcq.sharplucene.core.sample.SampleJavaBean;
 import com.hcq.sharplucene.rpc.zk.IServiceDiscovery;
 import com.hcq.sharplucene.rpc.zk.ServiceDiscoveryImpl;
 import com.hcq.sharplucene.rpc.zk.ZkConfig;
+import com.hcq.sharplucene.util.Config;
 
 import java.io.IOException;
 import java.util.Date;
@@ -20,7 +21,7 @@ public class ClientDemo {
 
     public static void main(String[] args) throws Exception {
 
-        IServiceDiscovery serviceDiscovery=new ServiceDiscoveryImpl(ZkConfig.CONNNECTION_STR);
+        IServiceDiscovery serviceDiscovery=new ServiceDiscoveryImpl(Config.getInstance().getKey("zk.address"));
         RpcClientProxy rpcClientProxy=new RpcClientProxy(serviceDiscovery);
 
 //        for(int i=0;i<10;i++) {
