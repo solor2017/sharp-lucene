@@ -1,22 +1,23 @@
 # sharp-lucene
 
-针对中小型项目快速实现索引增删改查。没必要用zlk那一套，不好维护。
-#使用非常简单：
-在对应的feild上加上自定义注解即可
-#Java客户端使用
-使用自定义Annotation注释JavaBean
-#自定义的Annotation非常简单，
-#com.hcq.sharplucene.core.annotation.PKey-- 主键字段标识。
-#使用@Pkey注释，表示该字段采用索引、存储、不切分的方式。注意Bean中的主键字段必须和Spring.xml索引配置中的索引主键域名字一致。
-#com.hcq.sharplucene.core.annotation.FieldStore--非主键字段的存储标识。
-#使用@FieldStore表示这个字段要在索引中存储，不使用表示不存储。
-#com.hcq.sharplucene.core.annotation.FieldIndex-- 非主键字段的索引表示。
-#不使用@FieldIndex等同于@FieldIndex("NO")表示不索引
-#使用@FieldIndex等同于@FieldIndex("NOT_ANALYZED")表示采用索引不分词策略。
-#使用@FieldIndex("ANALYZED")表示采用索引且分词策略。
-#如果Bean的属性不使用任何 Annotation的标识，则在索引中将忽略这个属性
-#JavaBean的Annotation列子：
-···public class SampleJavaBean implements Serializable {
+针对中小型项目快速实现索引增删改查。没必要用zlk那一套，不好维护。  
+使用非常简单：
+在对应的feild上加上自定义注解即可  
+Java客户端使用
+使用自定义Annotation注释JavaBean  
+自定义的Annotation非常简单，
+com.hcq.sharplucene.core.annotation.PKey-- 主键字段标识。  
+使用@Pkey注释，表示该字段采用索引、存储、不切分的方式。注意Bean中的主键字段必须和Spring.xml索引配置中的索引主键域名字一致。  
+com.hcq.sharplucene.core.annotation.FieldStore--非主键字段的存储标识。  
+使用@FieldStore表示这个字段要在索引中存储，不使用表示不存储。  
+com.hcq.sharplucene.core.annotation.FieldIndex-- 非主键字段的索引表示。  
+不使用@FieldIndex等同于@FieldIndex("NO")表示不索引  
+使用@FieldIndex等同于@FieldIndex("NOT_ANALYZED")表示采用索引不分词策略。  
+使用@FieldIndex("ANALYZED")表示采用索引且分词策略。  
+如果Bean的属性不使用任何 Annotation的标识，则在索引中将忽略这个属性  
+JavaBean的Annotation列子：
+(```)
+public class SampleJavaBean implements Serializable {
 
 	/**
 	 * 
@@ -97,4 +98,4 @@ RpcClientProxy rpcClientProxy=new RpcClientProxy(serviceDiscovery);
 IndexService indexService = rpcClientProxy.clientProxy(IndexService.class, null,"COMMENT")
 indexService.add(bean);//这一句就可实现索引创建
 查询见sample包里的例子程序
-···
+(```)
