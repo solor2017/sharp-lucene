@@ -15,6 +15,12 @@ com.hcq.sharplucene.core.annotation.FieldIndex-- 非主键字段的索引表示�
 使用@FieldIndex等同于@FieldIndex("NOT_ANALYZED")表示采用索引不分词策略。  
 使用@FieldIndex("ANALYZED")表示采用索引且分词策略。  
 如果Bean的属性不使用任何 Annotation的标识，则在索引中将忽略这个属性  
+(```)
+    function fun(){
+         echo "这是一句非常牛逼的代码";
+    }
+    fun();
+(```)
 JavaBean的Annotation列子：
 (```)
 	public class SampleJavaBean implements Serializable {
