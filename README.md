@@ -106,4 +106,5 @@ public class SampleJavaBean implements Serializable {
 	indexService.add(bean);//这一句就可实现索引创建
 ```
 
-查询见sample包里的例子程序
+查询见sample包里的例子程序  
+其它语言远程调用使用http+xml形式
