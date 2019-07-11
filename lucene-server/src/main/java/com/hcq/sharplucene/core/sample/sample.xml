@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index-data>
+	<document>
+		<field name="uuid" pkey="true" >10000</field>
+		<field name="url" store="true"><![CDATA[http://www.hx.com]]></field>
+		<field name="check" >false</field>
+		<field name="userName"  store="true" index="ANALYZED">胡长青</field>
+		<field name="registTime" store="true" index="NO_ANALYZED" >20120625180130</field>
+	</document>
+	<document>
+		<field name="uuid" pkey="true" >10001</field>
+		<field name="url" store="true"><![CDATA[http://www.hx.com]]></field>
+		<field name="check" >false</field>
+		<field name="userName"  store="true" index="ANALYZED">崔光振</field>
+		<field name="registTime" store="true" index="NO_ANALYZED" >20120625180131</field>
+	</document>	
+</index-data>

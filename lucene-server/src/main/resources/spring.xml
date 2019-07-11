@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+<!-- 索引分词器配置-->
+	<bean id="defaultAnalzyer" class="org.wltea.analyzer.lucene.IKAnalyzer">
+	</bean>
+
+<!-- 索引控制器配置-1 -->
+	<bean id="infoIndexConfig" class="com.hcq.sharplucene.core.index.IndexConfig">
+		<property name="indexName" value="INFO" /> 
+		<property name="keyFieldName" value="uuid" /> 
+		<property name="rootDir" value="d:/index/luci/" />
+		<property name="luceneAnalyzer" ref="defaultAnalzyer" />
+	</bean>
+	
+	<bean id="commentIndexConfig" class="com.hcq.sharplucene.core.index.IndexConfig">
+		<property name="indexName" value="COMMENT" />
+		<property name="keyFieldName" value="commentId" />
+		<property name="rootDir" value="D:/index/test/" />
+		<property name="luceneAnalyzer" ref="defaultAnalzyer" />
+	</bean>	
+
+<!-- 索引控制器配置-3 配置同上-->
+	<bean id="sampleIndexConfig" class="com.hcq.sharplucene.core.index.IndexConfig">
+		<property name="indexName" value="SAMPLE" />
+		<property name="keyFieldName" value="uuid" />
+		<property name="rootDir" value="d:/index/sample/" />
+		<property name="luceneAnalyzer" ref="defaultAnalzyer" />
+	</bean>	
+
+	<!-- 索引控制器的容器  -->
+	<bean id="HXLuci" class="com.hcq.sharplucene.core.index.IndexContextContainer" init-method="getInstance" scope="singleton" >
+		<property name="indexConfigs">
+			<list>
+				<ref bean="infoIndexConfig" />
+				<ref bean="commentIndexConfig" />
+			</list>	
+		</property>
+	</bean>
+</beans>
