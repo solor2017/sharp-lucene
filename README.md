@@ -81,21 +81,21 @@ public class SampleJavaBean implements Serializable {
 	public void setRegistTime(Date registTime) {
 		this.registTime = registTime;
 	}
-}
+}(```)
 本地jar包形式调用如下:
 
-IndexService indexService = IndexServiceFactory.getLocalIndexService("COMMENT");
+(```)IndexService indexService = IndexServiceFactory.getLocalIndexService("COMMENT");`
 SampleJavaBean bean = new SampleJavaBean();
 bean.setCheckFlag(true);
 bean.setRegistTime(new Date());
 bean.setUrl("www.baidu.com");
 bean.setUserName("solor");
 bean.setCommentId(20000);
-indexService.add(bean);//这一句就可实现索引创建
+indexService.add(bean);//这一句就可实现索引创建(```)
 远程rpc调用：
-IServiceDiscovery serviceDiscovery=new ServiceDiscoveryImpl(Config.getInstance().getKey("zk.address"));
+(```)IServiceDiscovery serviceDiscovery=new ServiceDiscoveryImpl(Config.getInstance().getKey("zk.address"));
 RpcClientProxy rpcClientProxy=new RpcClientProxy(serviceDiscovery);
 IndexService indexService = rpcClientProxy.clientProxy(IndexService.class, null,"COMMENT")
-indexService.add(bean);//这一句就可实现索引创建
+indexService.add(bean);//这一句就可实现索引创建(```)
 查询见sample包里的例子程序
-(```)
+
