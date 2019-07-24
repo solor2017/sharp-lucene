@@ -116,5 +116,5 @@ public class SampleJavaBean implements Serializable {
 
 indexContex类结构
 
-![<https://github.com/solor2017/sharp-lucene/blob/master/lucene-server/src/main/resources/2.png>]()
+![](<https://github.com/solor2017/sharp-lucene/blob/master/lucene-server/src/main/resources/2.png>)
 
