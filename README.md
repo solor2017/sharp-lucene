@@ -1,5 +1,7 @@
 # sharp-lucene
 
+这是13年的代码，近期加入了zk、netty  
+
 针对中小型项目快速实现索引增删改查。没必要用zlk那一套，不好维护。  
 使用非常简单：
 在对应的Field上加上自定义注解即可  
@@ -83,7 +85,6 @@ public class SampleJavaBean implements Serializable {
 }
 ```
 
-
 本地jar包形式调用如下:
 
 ```java
@@ -108,3 +109,12 @@ public class SampleJavaBean implements Serializable {
 
 查询见sample包里的例子程序  
 其它语言远程调用使用http+xml形式
+
+整体架构
+
+![](<https://github.com/solor2017/sharp-lucene/blob/master/lucene-server/src/main/resources/1.png>)
+
+indexContex类结构
+
+![<https://github.com/solor2017/sharp-lucene/blob/master/lucene-server/src/main/resources/2.png>]()
+
