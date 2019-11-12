@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <org.apache.lucene.version>3.6.0</org.apache.lucene.version>
+        <org.apache.lucene.version>8.3.0</org.apache.lucene.version>
         <org.slf4j.version>1.7.12</org.slf4j.version>
         <logback.version>1.2.3</logback.version>
         <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
