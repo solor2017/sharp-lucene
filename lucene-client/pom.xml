@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <org.slf4j.version>1.7.12</org.slf4j.version>
         <logback.version>1.2.3</logback.version>
-        <netty.version>4.1.32.Final</netty.version>
+        <netty.version>4.1.42.Final</netty.version>
     </properties>
 
     <dependencies>
