@@ -22,7 +22,7 @@
         <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
         <com.ikanalyer.version>3.2.8</com.ikanalyer.version>
         <commons-logging.version>1.1.1</commons-logging.version>
-        <netty.version>4.1.32.Final</netty.version>
+        <netty.version>4.1.42.Final</netty.version>
     </properties>
 
     <dependencies>
